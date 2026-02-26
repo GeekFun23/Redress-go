@@ -1288,13 +1288,14 @@
                     </div>
                 </div>
             </div>
-            <div class="contact-form fade-in">
+            <form class="contact-form fade-in" action="https://formspree.io/f/xjgelqro" method="POST">
+                <input type="hidden" name="_subject" value="Nouveau message depuis le site Redress'Go">
                 <input type="text" name="nom" placeholder="Votre nom" required>
                 <input type="tel" name="telephone" placeholder="Votre téléphone" required>
                 <input type="email" name="email" placeholder="Votre email">
                 <textarea name="message" placeholder="Décrivez les dommages sur votre véhicule..."></textarea>
-                <button type="button" class="btn btn-primary" onclick="alert('Pour envoyer votre demande, appelez le 07 59 59 64 41 ou envoyez un email à redress.go@gmail.com')">Envoyer la demande</button>
-            </div>
+                <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+            </form>
         </div>
     </section>
 
