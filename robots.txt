@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://siteprokev.vercel.app/sitemap.xml
