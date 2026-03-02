@@ -395,7 +395,54 @@
             position: relative;
         }
 
-        /* ===== SECTIONS ===== */
+        
+        /* ===== PROMO COUNTDOWN ===== */
+        .promo-countdown {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+        }
+        .promo-countdown-title {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            letter-spacing: 0.4px;
+        }
+        .promo-countdown-grid {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .promo-countdown .time-box {
+            min-width: 84px;
+            padding: 10px 14px;
+            border-radius: 14px;
+            background: rgba(10,10,10,0.28);
+            border: 1px solid rgba(255,255,255,0.18);
+            backdrop-filter: blur(10px);
+        }
+        .promo-countdown .time-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            line-height: 1;
+        }
+        .promo-countdown .time-label {
+            margin-top: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.85;
+        }
+        .promo-countdown-note {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            min-height: 1.2em;
+        }
+
+/* ===== SECTIONS ===== */
         .section { padding: 100px 24px; }
         .section-title {
             font-family: 'Bebas Neue', sans-serif;
@@ -1023,6 +1070,168 @@
             .stats-grid { grid-template-columns: 1fr; gap: 24px; }
             .promo h2 { font-size: 1.8rem; }
         }
+    
+
+        /* =========================
+           AVIS CLIENTS
+        ========================= */
+        .reviews-grid{
+            display:grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap:24px;
+            margin-top:26px;
+        }
+        @media (max-width: 900px){
+            .reviews-grid{ grid-template-columns: 1fr; }
+        }
+        .reviews-card{
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 18px 60px rgba(0,0,0,0.25);
+        }
+        .reviews-summary{
+            display:flex;
+            align-items:center;
+            gap:14px;
+            flex-wrap:wrap;
+            margin-bottom:14px;
+        }
+        .reviews-summary-score{
+            display:flex;
+            align-items:baseline;
+            gap:6px;
+            padding:10px 12px;
+            border-radius:14px;
+            background: rgba(0,0,0,0.35);
+            border:1px solid rgba(255,255,255,0.06);
+        }
+        .reviews-score{
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--white);
+        }
+        .reviews-score-max{
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 600;
+        }
+        .reviews-summary-stars{
+            display:flex;
+            gap:4px;
+            align-items:center;
+            font-size: 1.05rem;
+            color: var(--orange);
+            letter-spacing: 1px;
+        }
+        .reviews-summary-count{
+            color: rgba(255,255,255,0.7);
+            font-weight: 600;
+        }
+        .reviews-list{
+            display:flex;
+            flex-direction:column;
+            gap:12px;
+            margin-top:10px;
+            max-height: 320px;
+            overflow:auto;
+            padding-right: 6px;
+        }
+        .review-item{
+            padding: 14px 14px;
+            border-radius: 16px;
+            background: rgba(0,0,0,0.28);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .review-head{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:12px;
+            margin-bottom: 8px;
+        }
+        .review-name{
+            font-weight: 800;
+            color: var(--white);
+        }
+        .review-date{
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            white-space: nowrap;
+        }
+        .review-stars{
+            color: var(--orange);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+        .review-comment{
+            color: rgba(255,255,255,0.82);
+            line-height: 1.55;
+        }
+        .reviews-note{
+            margin-top: 12px;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.55);
+        }
+        .reviews-form-title{
+            margin: 0 0 14px 0;
+            font-size: 1.15rem;
+            font-weight: 900;
+            letter-spacing: 0.4px;
+        }
+        .reviews-form input,
+        .reviews-form select,
+        .reviews-form textarea{
+            width:100%;
+            background: rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.10);
+            color: var(--white);
+            border-radius: 14px;
+            padding: 12px 14px;
+            outline: none;
+            font-size: 0.95rem;
+        }
+        .reviews-form input::placeholder,
+        .reviews-form textarea::placeholder{
+            color: rgba(255,255,255,0.55);
+        }
+        .reviews-row{
+            display:grid;
+            grid-template-columns: 1fr 160px;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        @media (max-width: 520px){
+            .reviews-row{ grid-template-columns: 1fr; }
+        }
+        .reviews-form textarea{
+            min-height: 120px;
+            resize: vertical;
+            margin-bottom: 10px;
+        }
+        .reviews-consent{
+            display:flex;
+            align-items:flex-start;
+            gap:10px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.75);
+            margin: 8px 0 14px 0;
+            user-select: none;
+        }
+        .reviews-consent input{
+            width:18px;
+            height:18px;
+            margin-top:2px;
+            accent-color: var(--orange);
+        }
+        .reviews-success{
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.85);
+        }
+
+
     </style>
     <script type="application/ld+json">
     {
@@ -1110,6 +1319,17 @@
         <div>
             <h2>🔥 OFFRE D'HIVER — JUSQU'À -30% SUR NOS PRESTATIONS</h2>
             <p>Profitez de nos tarifs réduits pour remettre votre carrosserie à neuf !</p>
+            <div class="promo-countdown" role="status" aria-live="polite">
+                <div class="promo-countdown-title">Fin de l'offre : <strong>21 mars 2026 — 00h00</strong></div>
+                <div class="promo-countdown-grid" aria-label="Compte à rebours de l'offre">
+                    <div class="time-box"><div class="time-value" id="promoDays">00</div><div class="time-label">Jours</div></div>
+                    <div class="time-box"><div class="time-value" id="promoHours">00</div><div class="time-label">Heures</div></div>
+                    <div class="time-box"><div class="time-value" id="promoMinutes">00</div><div class="time-label">Minutes</div></div>
+                    <div class="time-box"><div class="time-value" id="promoSeconds">00</div><div class="time-label">Secondes</div></div>
+                </div>
+                <div class="promo-countdown-note" id="promoCountdownNote"></div>
+            </div>
+
         </div>
     </div>
 
@@ -1299,6 +1519,58 @@
         </div>
     </section>
 
+    <!-- AVIS CLIENTS -->
+    <section class="section" id="avis">
+        <h2 class="section-title fade-in">AVIS <span>CLIENTS</span></h2>
+        <p class="section-sub fade-in">Vous avez fait appel à Redress'Go ? Laissez votre avis ici 👇</p>
+
+        <div class="reviews-grid">
+            <div class="reviews-card fade-in">
+                <div class="reviews-summary">
+                    <div class="reviews-summary-score">
+                        <span class="reviews-score" id="reviewsAvg">—</span>
+                        <span class="reviews-score-max">/5</span>
+                    </div>
+                    <div class="reviews-summary-stars" id="reviewsAvgStars" aria-label="Note moyenne"></div>
+                    <div class="reviews-summary-count" id="reviewsCount">0 avis</div>
+                </div>
+
+                <div class="reviews-list" id="reviewsList" aria-live="polite"></div>
+
+                <div class="reviews-note">
+                    * Les avis sont affichés et conservés sur ce navigateur (pas de compte / pas d’inscription).
+                </div>
+            </div>
+
+            <div class="reviews-card fade-in">
+                <h3 class="reviews-form-title">Donner votre avis</h3>
+                <form id="reviewForm" class="reviews-form">
+                    <div class="reviews-row">
+                        <input type="text" id="reviewName" name="reviewName" placeholder="Votre prénom (ex: Marc)" maxlength="40" required>
+                        <select id="reviewRating" name="reviewRating" required aria-label="Votre note">
+                            <option value="" disabled selected>Note</option>
+                            <option value="5">★★★★★ (5)</option>
+                            <option value="4">★★★★☆ (4)</option>
+                            <option value="3">★★★☆☆ (3)</option>
+                            <option value="2">★★☆☆☆ (2)</option>
+                            <option value="1">★☆☆☆☆ (1)</option>
+                        </select>
+                    </div>
+                    <textarea id="reviewComment" name="reviewComment" placeholder="Votre avis (ex: rapide, propre, super résultat…)" maxlength="400" required></textarea>
+
+                    <label class="reviews-consent">
+                        <input type="checkbox" id="reviewConsent" required>
+                        J’accepte que mon avis soit affiché sur le site.
+                    </label>
+
+                    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Publier l’avis</button>
+                    <div class="reviews-success" id="reviewSuccess" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
     <!-- FOOTER -->
     <footer class="footer">
         <p>© 2026 Redress'Go — Débosselage sans peinture à domicile</p>
@@ -1455,6 +1727,187 @@
                 if (e.target === this) this.classList.remove('active');
             });
         });
-    </script>
+    
+
+        // ===== PROMO COUNTDOWN (fin : 21 mars 2026 00:00 France) =====
+        (function promoCountdownInit() {
+            const elDays = document.getElementById('promoDays');
+            const elHours = document.getElementById('promoHours');
+            const elMinutes = document.getElementById('promoMinutes');
+            const elSeconds = document.getElementById('promoSeconds');
+            const elNote = document.getElementById('promoCountdownNote');
+
+            if (!elDays || !elHours || !elMinutes || !elSeconds) return;
+
+            // France le 21/03/2026 est encore en CET (+01:00)
+            const targetTime = new Date('2026-03-21T00:00:00+01:00').getTime();
+
+            const pad2 = (n) => String(n).padStart(2, '0');
+
+            function render(msLeft) {
+                const totalSeconds = Math.max(0, Math.floor(msLeft / 1000));
+                const days = Math.floor(totalSeconds / 86400);
+                const hours = Math.floor((totalSeconds % 86400) / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = totalSeconds % 60;
+
+                elDays.textContent = pad2(days);
+                elHours.textContent = pad2(hours);
+                elMinutes.textContent = pad2(minutes);
+                elSeconds.textContent = pad2(seconds);
+            }
+
+            function tick() {
+                const now = Date.now();
+                const diff = targetTime - now;
+
+                if (diff <= 0) {
+                    render(0);
+                    if (elNote) elNote.textContent = "⏳ L'offre est terminée.";
+                    return false;
+                } else {
+                    render(diff);
+                    if (elNote) elNote.textContent = "";
+                    return true;
+                }
+            }
+
+            // Premier affichage + intervalle
+            tick();
+            const timer = setInterval(() => {
+                const keepGoing = tick();
+                if (!keepGoing) clearInterval(timer);
+            }, 1000);
+        })();
+
+    
+
+        /* =========================
+           AVIS CLIENTS (localStorage)
+        ========================= */
+        const REVIEWS_KEY = "redressgo_reviews_v1";
+
+        function starString(n){
+            const full = "★★★★★".slice(0, n);
+            const empty = "☆☆☆☆☆".slice(0, 5 - n);
+            return full + empty;
+        }
+
+        function formatFRDate(iso){
+            try{
+                const d = new Date(iso);
+                return d.toLocaleDateString("fr-FR", { year: "numeric", month: "short", day: "2-digit" });
+            }catch(e){
+                return "";
+            }
+        }
+
+        function loadReviews(){
+            try{
+                return JSON.parse(localStorage.getItem(REVIEWS_KEY) || "[]");
+            }catch(e){
+                return [];
+            }
+        }
+
+        function saveReviews(list){
+            localStorage.setItem(REVIEWS_KEY, JSON.stringify(list));
+        }
+
+        function computeAvg(list){
+            if(!list.length) return 0;
+            const sum = list.reduce((a,r)=> a + (Number(r.rating)||0), 0);
+            return Math.round((sum / list.length) * 10) / 10;
+        }
+
+        function renderReviews(){
+            const listEl = document.getElementById("reviewsList");
+            const avgEl = document.getElementById("reviewsAvg");
+            const avgStarsEl = document.getElementById("reviewsAvgStars");
+            const countEl = document.getElementById("reviewsCount");
+            if(!listEl || !avgEl || !avgStarsEl || !countEl) return;
+
+            const reviews = loadReviews().sort((a,b)=> (b.createdAt||"").localeCompare(a.createdAt||""));
+            const avg = computeAvg(reviews);
+
+            if(reviews.length === 0){
+                avgEl.textContent = "—";
+                avgStarsEl.textContent = "";
+                countEl.textContent = "0 avis";
+                listEl.innerHTML = `
+                    <div class="review-item">
+                        <div class="review-comment">Aucun avis pour le moment. Soyez le premier à en laisser un 🙌</div>
+                    </div>
+                `;
+                return;
+            }
+
+            avgEl.textContent = String(avg).replace(".", ",");
+            avgStarsEl.textContent = starString(Math.round(avg));
+            countEl.textContent = `${reviews.length} avis`;
+
+            const maxToShow = 10;
+            const shown = reviews.slice(0, maxToShow);
+            listEl.innerHTML = shown.map(r => `
+                <div class="review-item">
+                    <div class="review-head">
+                        <div>
+                            <div class="review-name">${escapeHtml(r.name || "Client")}</div>
+                            <div class="review-stars" aria-label="Note ${r.rating}/5">${starString(Number(r.rating)||0)}</div>
+                        </div>
+                        <div class="review-date">${formatFRDate(r.createdAt)}</div>
+                    </div>
+                    <div class="review-comment">${escapeHtml(r.comment || "")}</div>
+                </div>
+            `).join("");
+        }
+
+        function escapeHtml(str){
+            return String(str)
+                .replace(/&/g,"&amp;")
+                .replace(/</g,"&lt;")
+                .replace(/>/g,"&gt;")
+                .replace(/"/g,"&quot;")
+                .replace(/'/g,"&#039;");
+        }
+
+        (function initReviews(){
+            const form = document.getElementById("reviewForm");
+            if(!form) return;
+
+            renderReviews();
+
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const name = (document.getElementById("reviewName")?.value || "").trim();
+                const rating = Number(document.getElementById("reviewRating")?.value || 0);
+                const comment = (document.getElementById("reviewComment")?.value || "").trim();
+                const consent = document.getElementById("reviewConsent")?.checked;
+
+                const msg = document.getElementById("reviewSuccess");
+
+                if(!name || !rating || !comment || !consent){
+                    if(msg) msg.textContent = "Merci de remplir tous les champs et d’accepter l’affichage de l’avis.";
+                    return;
+                }
+
+                const reviews = loadReviews();
+                reviews.push({
+                    name: name.slice(0,40),
+                    rating: Math.min(5, Math.max(1, rating)),
+                    comment: comment.slice(0,400),
+                    createdAt: new Date().toISOString()
+                });
+                saveReviews(reviews);
+
+                form.reset();
+                if(msg) msg.textContent = "Merci ! Votre avis a été publié ✅";
+                renderReviews();
+            });
+        })();
+
+
+</script>
 </body>
 </html>
